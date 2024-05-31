@@ -12,26 +12,26 @@ def interface_initialization():
 
 windll.shcore.SetProcessDpiAwareness(1) # Для отсутствия размытия интерфейса
 root = Tk()
-root.geometry("1600x900")
+root.geometry("800x900")
 root.title("РГР")
 root.resizable(False, False)
 
-frm_scheme = Frame(
-    root,
-    background='red'
-)
-frm_scheme.place(
-    x=0,
-    y=0,
-    width = 800,
-    height = 900
-)
+# frm_scheme = Frame(
+#     root,
+#     background='red'
+# )
+# frm_scheme.place(
+#     x=0,
+#     y=0,
+#     width = 800,
+#     height = 900
+# )
 
 frm_checkbutton = Frame(
     root,
 )
 frm_checkbutton.place(
-    x=800,
+    x=0,
     y=0,
     width = 800,
     height = 160
@@ -41,7 +41,7 @@ frm_Y = Frame(
     root,
 )
 frm_Y.place(
-    x=800,
+    x=0,
     y=160,
     width = 800,
     height = 160
@@ -51,7 +51,7 @@ frm_E = Frame(
     root,
 )
 frm_E.place(
-    x=800,
+    x=0,
     y=320,
     width = 800,
     height = 160
@@ -61,7 +61,7 @@ frm_solveandsave = Frame(
     root,
 )
 frm_solveandsave.place(
-    x=800,
+    x=0,
     y=480,
     width = 800,
     height = 100
@@ -71,7 +71,7 @@ frm_U = Frame(
     root,
 )
 frm_U.place(
-    x=800,
+    x=0,
     y=580,
     width = 800,
     height = 160
@@ -81,37 +81,37 @@ frm_X = Frame(
     root,
 )
 frm_X.place(
-    x=800,
+    x=0,
     y=740,
     width = 800,
     height = 160
 )
 
-### Схема
-scheme = PhotoImage(file="gfx/scheme.png")
+# ### Схема
+# scheme = PhotoImage(file="gfx/scheme.png")
 
-label_scheme = Label(
-    frm_scheme,
-    image=scheme
-)
+# label_scheme = Label(
+#     frm_scheme,
+#     image=scheme
+# )
 
-label_scheme.grid(
-    row=0,
-    column=0
-)
+# label_scheme.grid(
+#     row=0,
+#     column=0
+# )
 
 
 ### Выключатели
 
-label_i_checkbutton = Label(
-    frm_checkbutton,
-    text='i'
-)
+# label_i_checkbutton = Label(
+#     frm_checkbutton,
+#     text='i'
+# )
 
-label_i_checkbutton.grid(
-    row=0,
-    column=0,
-)
+# label_i_checkbutton.grid(
+#     row=0,
+#     column=0,
+# )
 
 label_B_checkbutton = Label(
     frm_checkbutton,
@@ -119,17 +119,17 @@ label_B_checkbutton = Label(
 )
 
 label_B_checkbutton.grid(
-    row=1,
+    row=0,
     column=0,
 )
 
-list_label_checkbutton = [[]]
+# list_label_checkbutton = [[]]
 list_checkbutton = [[]]
 list_enabled_checkbutton = [[]]
 columncount_checkbutton = 0
 for i in range(1, 24 +  1):
     if i == 9 or (11 < i < 21):
-        list_label_checkbutton.append([])
+        # list_label_checkbutton.append([])
         list_checkbutton.append([])
         list_enabled_checkbutton.append([])
 
@@ -140,12 +140,12 @@ for i in range(1, 24 +  1):
             text=str(i)
         )
 
-        list_label_checkbutton.append(label_checkbutton)
+        # list_label_checkbutton.append(label_checkbutton)
 
-        list_label_checkbutton[i].grid(
-            row = 0,
-            column = columncount_checkbutton
-        )
+        # list_label_checkbutton[i].grid(
+        #     row = 0,
+        #     column = columncount_checkbutton
+        # )
 
         enabled_checkbutton = IntVar(value=1)
 
@@ -158,7 +158,7 @@ for i in range(1, 24 +  1):
         list_enabled_checkbutton.append(enabled_checkbutton)
 
         list_checkbutton[i].grid(
-            row = 1,
+            row = 0,
             column = columncount_checkbutton,
         )
 
